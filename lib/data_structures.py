@@ -30,7 +30,7 @@ def get_spiciest_foods(spicy_foods):
 
 def print_spicy_foods(spicy_foods):
      for food in spicy_foods:
-          return ( food["name"] + " " + "("+ (food["cuisine"])+ ")" + " | " + "Heat Level: "+ "🌶"*(food["heat_level"]))
+          print ( food["name"] + " " + "("+ (food["cuisine"])+ ")" + " | " + "Heat Level: "+ "🌶"*(food["heat_level"]))
 print_spicy_foods(spicy_foods)
 
 
@@ -42,15 +42,17 @@ def get_spicy_food_by_cuisine(spicy_foods, cuisine):
 
 
 def print_spiciest_foods(spicy_foods):
-     for food in spicy_foods:
-          if food["heat_level"]>5:
-            #    print(food["name"])
-               name= food["name"]
-               cuisine = food["cuisine"]
-               level = food["heat_level"]
-               emojis= "🌶"*level
-               mess = f"{name} ({cuisine}) | Heat Level: {emojis}"
-               print(mess)
+     spiciest_food = get_spiciest_foods(spicy_foods)
+     print_spicy_foods(spiciest_food)
+    #  for food in spicy_foods:
+    #       if food["heat_level"]>5:
+    #         #    print(food["name"])
+    #            name= food["name"]
+    #            cuisine = food["cuisine"]
+    #            level = food["heat_level"]
+    #            emojis= "🌶"*level
+    #            mess = f"{name} ({cuisine}) | Heat Level: {emojis}"
+    #            print(mess)
     #  filter_food= [food for food in spicy_foods if food["heat_level"]>5]
      
     #  print(filter_food)
